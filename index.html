@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Consulta de CEP</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="form-image">
+      <img src="/img/undraw_searching_re_3ra9.svg" alt="ilustração de uma mulher procurando algo">
+    </div>
+    <div class="form">
+      <form action="#">
+        <div class="form-header">
+          <div class="title">
+            <h2>Consulte seu CEP<h2>
+          </div>
+        </div>
+        <div class="inputs">
+          <div class="input-box">
+            <label for="cep">CEP<label>
+                <input id="cep" type="text" name="cep" placeholder="Digite seu CEP" required maxlength="8"> 
+          </div>
+          <div class="buscar-button">
+            <button>
+              <a href="#">Buscar</a></button>
+          </div>
+          <div class="input-box">
+            <label for="rua">Rua<label>
+                <input id="rua" type="text" name="rua" placeholder="Rua">
+          </div>
+          <div class="input-box">
+            <label for="bairro">Bairro<label>
+                <input id="bairro" type="text" name="bairro" placeholder="Bairro">
+          </div>
+          <div class="input-box">
+            <label for="cidade">Cidade<label>
+                <input id="cidade" type="text" name="cidade" placeholder="Cidade">
+          </div>
+          <div class="input-box">
+            <label for="estado">Estado<label>
+                <input id="estado" type="text" name="estado" placeholder="Estado">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>    
+
+  <script src="javascript/consultar-dados.js"></script>
+
+
+</body>
+
+</html>
