@@ -8,8 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
   <title>Consulta de CEP</title>
 </head>
-
-<body>
+<body>        
   <div class="container">
     <div class="form-image">
       <img src="/img/undraw_searching_re_3ra9.svg" alt="ilustração de uma mulher procurando algo">
@@ -22,14 +21,11 @@
           </div>
         </div>
         <div class="inputs">
-          <div class="input-box">
+          <div class="input-cep">
             <label for="cep">CEP<label>
-                <input id="cep" type="text" name="cep" placeholder="Digite seu CEP" required maxlength="8"> 
-          </div>
-          <div class="buscar-button">
-            <button>
-              <a href="#">Buscar</a></button>
-          </div>
+                <input id="cep" type="text" name="cep" placeholder="Digite seu CEP" required maxlength="8">
+                <button id="btnBuscarCep" class ="btn">Buscar</button>
+            </div>
           <div class="input-box">
             <label for="rua">Rua<label>
                 <input id="rua" type="text" name="rua" placeholder="Rua">
@@ -50,8 +46,8 @@
       </form>
     </div>
   </div>    
-
   <script src="javascript/consultar-dados.js"></script>
+  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 
 
 </body>

@@ -51,28 +51,27 @@ body {
   justify-content: space-between;
 }
 
-.buscar-button {
+
+
+.btn {
   display: inline-block;
   align-items: center;
-  padding: 0.2rem;
-}
-
-.buscar-button button {
-  border: none;
+  padding: 0rem;
   background-color: #104494;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
-}
-
-.buscar-button button:hover {
-  background-color: #3a4d69;
-}
-
-.buscar-button button a {
   text-decoration: none;
   font-weight: 600;
   color: #fff;
+  width: 3.8rem;
+  height: 1.7rem;
+  margin: 0rem;
+  cursor:pointer
+
+}
+
+.btn:hover {
+  background-color: #3a4d69;
 }
 
 .form-header h2::after {
@@ -101,7 +100,7 @@ body {
 
 .input-box input {
   margin: 0.6rem 1rem;
-  padding: 0.6rem 2.5rem;
+  padding: 0.6rem 2rem;
   border: none;
   border-radius: 10px;
   box-shadow: 2px 4px 0px #c3d6f0b6;
@@ -121,3 +120,34 @@ body {
   font-weight: 600;
   color: #000000c0;
 }
+
+.input-cep {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.3rem;
+}
+
+.input-cep input {
+  margin: 0.6rem 1rem;
+  padding: 0.6rem 2.5rem;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 2px 4px 0px #c3d6f0b6;
+  width: 5.6rem;
+}
+
+.input-cep input:hover {
+  background-color: #a4cbf077;
+}
+
+.input-cep input:focus-visible {
+  outline: 1px solid #224a85;
+}
+
+.input-cep label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #000000c0;
+}
+
+
