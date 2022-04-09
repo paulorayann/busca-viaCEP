@@ -5,51 +5,51 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/estilo.css">
   <title>Consulta de CEP</title>
 </head>
-<body>        
-  <div class="container">
-    <div class="form-image">
-      <img src="/img/undraw_searching_re_3ra9.svg" alt="ilustração de uma mulher procurando algo">
-    </div>
-    <div class="form">
-      <form action="#">
-        <div class="form-header">
-          <div class="title">
-            <h2>Consulte seu CEP<h2>
-          </div>
+<body>
+    <section id="container">
+        <div class="form-image">
+            <img src="/img/undraw_searching_re_3ra9.svg" alt="ilustração de uma mulher procurando algo">
         </div>
-        <div class="inputs">
-          <div class="input-cep">
-            <label for="cep">CEP<label>
-                <input id="cep" type="text" name="cep" placeholder="Digite seu CEP" required maxlength="8">
-                <button id="btnBuscarCep" class ="btn">Buscar</button>
-            </div>
-          <div class="input-box">
-            <label for="rua">Rua<label>
-                <input id="rua" type="text" name="rua" placeholder="Rua">
-          </div>
-          <div class="input-box">
-            <label for="bairro">Bairro<label>
-                <input id="bairro" type="text" name="bairro" placeholder="Bairro">
-          </div>
-          <div class="input-box">
-            <label for="cidade">Cidade<label>
-                <input id="cidade" type="text" name="cidade" placeholder="Cidade">
-          </div>
-          <div class="input-box">
-            <label for="estado">Estado<label>
-                <input id="estado" type="text" name="estado" placeholder="Estado">
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>    
-  <script src="javascript/consultar-dados.js"></script>
-  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+        <div class="form-div">
+            <form action="" id="formulario">
+                <br><br>
+                <div class="title">
+                    <h2>Consulte seu CEP<h2>
+                  </div>
+                  <br>
+                <label for="."> Digite seu CEP
+                <input type="text" name="cep" placeholder="CEP " id="cep"> 
+                <button type="button" onclick='consultaCEP()'>Buscar</button>
+
+                
+              
+                <br><label id="resposta"></label>
+                <div class="loader"></div>
 
 
+                <div id="hidden-input" style="display: none;" >
+                    <br><br>
+                    <label for=""> Rua   </label>
+                    <input type="text" name="" placeholder=" " id="rua">
+                    <br><br>
+                    <label for="">  Bairro   </label>
+                    <input type="text" name="" placeholder=" " id="bairro">
+                    <br><br>
+                    <label for=""> Cidade</label>
+                    <input type="text" name="" placeholder=" " id="cidade">
+                    <br><br>
+                    <label for="">Estado </label>
+                    <input type="text" name="" placeholder=" " id="estado">
+
+                    <br>
+                </div>
+            </form>
+        </div>
+    </section>
 </body>
+<script src="javascript/consultar-dados.js"></script>
 
 </html>

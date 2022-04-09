@@ -1,30 +1,41 @@
-let cep = document.querySelector('#cep');
-let rua = document.querySelector('#rua');
-let bairro = document.querySelector('#bairro');
-let cidade = document.querySelector('#cidade');
-let estado = document.querySelector('#estado');
-let btnCep = document.querySelector('#btnBuscarCep');
 
+const logradouro = document.querySelector('#rua');
+const bairro = document.querySelector('#bairro');
+const cidade = document.querySelector('#cidade');
+const estado = document.querySelector('#estado');
+const hidden_input = document.querySelector('#hidden-input');
 
-cep.addEventListener('blur',function(e) {
-        let cep = e.target.value;
-        let script = document.createElement('script');
-        script.src= 'https://viacep.com.br/ws/' +cep+ '/json/?callback=consultaCEP'
-        document.body.appendChild(script);
-});
+function consultaCEP() {
 
-function consultaCEP(conteudo) {
-    if("erro" in conteudo) {
-        alert('CEP não encontrado');
-        return;
+    cep = document.getElementById("cep").value
+    apiURL = 'https://viacep.com.br/ws/' + cep + '/json'
+    pedido = new XMLHttpRequest()
+    pedido.open('GET', apiURL)
+    pedido.onerror = function(e) {
+        document.getElementById('resposta').innerHTML = 'CEP INVÁLIDO'
+        document.getElementById("cep").style.border = '1px solid red'
+    
     }
+    pedido.onload = () => {
+        var conteudo = JSON.parse(pedido.responseText)
+        if (conteudo.erro === true) {
+            document.getElementById('resposta').innerHTML = 'CEP NÃO ENCONTRADO'
+        } else {
+            hidden_input.style.display = 'block'
+            console.log(conteudo);
+            logradouro.value = conteudo.logradouro;
+            bairro.value = conteudo.bairro;
+            cidade.value = conteudo.localidade;
+            estado.value = conteudo.uf;
+        }
+    }
+    pedido.send();
+    logradouro.value = ''; 
+    bairro.value = ''; 
+    cidade.value = ''; 
+    estado.value = ''; 
+    hidden_input.style.display = 'none'
+    resposta.innerHTML = ''
 
-
-
-    console.log(conteudo);
-    rua.value = conteudo.logradouro;
-    bairro.value = conteudo.bairro;
-    cidade.value = conteudo.localidade;
-    estado.value = conteudo.uf;
 
 }
