@@ -17,38 +17,41 @@
         <div class="form">
             <form action="#" id="formulario">
                 <div class="form-header">
-                    <div class="title">
-                        <h2>Consulte seu CEP<h2>
-                    </div>
+                <div class="title">
+                <h2>Consulte seu CEP<h2>
+                </div>
+
+                <div class="preload">
+                    <div class="emoji"> 🕐</div>
+               </div>
+              
                 </div>
                 <div class="input-group">
                     <div class="input-header">
                         <label for="cep">CEP<label>
-                                <input id="cep" type="text" name="cep" placeholder="Digite seu CEP" required maxlength="9">
-                                <div class="search-btn">
-                                    <button type="button" onclick='consultaCEP()'>Buscar</button>
-                                    <label id="resposta"></label>
-                                    <div class="loader"></div>
-                                </div>
+                            <label id="resposta" color: red></label>
+                        <input id="cep" type="text" name="cep" placeholder="Digite seu CEP" required maxlength="9">
+                        <div class="search-btn">
+                        <button type="button" onclick='consultaCEP()'>Buscar</button>
 
-              
                     </div>
                     <div id="hidden-input" style="display: none;">
+
                         <div class="input-after">
-                            <label for="">Rua</label>
-                            <input type="text" name="" placeholder=" " id="rua">
-                        </div>
-                        <div class="input-after">
-                            <label for="">Bairro</label>
-                            <input type="text" name="" placeholder=" " id="bairro">
-                        </div>
-                        <div class="input-after">
-                            <label for="">Cidade</label>
-                            <input type="text" name="" placeholder=" " id="cidade">
-                        </div>
-                        <div class="input-after">
-                            <label for="">Estado</label>
-                            <input type="text" name="" placeholder=" " id="estado">
+                        <label for="">Rua</label>
+                        <input type="text" name="" placeholder=" " id="rua">
+                    </div>
+                    <div class="input-after">
+                        <label for="">Bairro</label>
+                        <input type="text" name="" placeholder=" " id="bairro">
+                    </div>
+                    <div class="input-after">
+                        <label for="">Cidade</label>
+                        <input type="text" name="" placeholder=" " id="cidade">
+                    </div>
+                    <div class="input-after">
+                        <label for="">Estado</label>
+                        <input type="text" name="" placeholder=" " id="estado">
                             
                         </div>
                     </div>
