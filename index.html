@@ -2,49 +2,56 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/estilo.css">
-  <title>Consulta de CEP</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Consulta de CEP</title>
 </head>
+
 <body>
     <section id="container">
         <div class="form-image">
-            <img src="/img/undraw_searching_re_3ra9.svg" alt="ilustração de uma mulher procurando algo">
+            <img src="img/undraw_adventure_re_ncqp.svg" alt="ilustração de uma mulher procurando algo">
         </div>
-        <div class="form-div">
-            <form action="" id="formulario">
-                <br><br>
-                <div class="title">
-                    <h2>Consulte seu CEP<h2>
-                  </div>
-                  <br>
-                <label for="."> Digite seu CEP
-                <input type="text" name="cep" placeholder="CEP " id="cep"> 
-                <button type="button" onclick='consultaCEP()'>Buscar</button>
+        <div class="form">
+            <form action="#" id="formulario">
+                <div class="form-header">
+                    <div class="title">
+                        <h2>Consulte seu CEP<h2>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-header">
+                        <label for="cep">CEP<label>
+                                <input id="cep" type="text" name="cep" placeholder="Digite seu CEP" required maxlength="9">
+                                <div class="search-btn">
+                                    <button type="button" onclick='consultaCEP()'>Buscar</button>
+                                    <label id="resposta"></label>
+                                    <div class="loader"></div>
+                                </div>
 
-                
               
-                <br><label id="resposta"></label>
-                <div class="loader"></div>
-
-
-                <div id="hidden-input" style="display: none;" >
-                    <br><br>
-                    <label for=""> Rua   </label>
-                    <input type="text" name="" placeholder=" " id="rua">
-                    <br><br>
-                    <label for="">  Bairro   </label>
-                    <input type="text" name="" placeholder=" " id="bairro">
-                    <br><br>
-                    <label for=""> Cidade</label>
-                    <input type="text" name="" placeholder=" " id="cidade">
-                    <br><br>
-                    <label for="">Estado </label>
-                    <input type="text" name="" placeholder=" " id="estado">
-
-                    <br>
+                    </div>
+                    <div id="hidden-input" style="display: none;">
+                        <div class="input-after">
+                            <label for="">Rua</label>
+                            <input type="text" name="" placeholder=" " id="rua">
+                        </div>
+                        <div class="input-after">
+                            <label for="">Bairro</label>
+                            <input type="text" name="" placeholder=" " id="bairro">
+                        </div>
+                        <div class="input-after">
+                            <label for="">Cidade</label>
+                            <input type="text" name="" placeholder=" " id="cidade">
+                        </div>
+                        <div class="input-after">
+                            <label for="">Estado</label>
+                            <input type="text" name="" placeholder=" " id="estado">
+                            
+                        </div>
+                    </div>
                 </div>
             </form>
         </div>
