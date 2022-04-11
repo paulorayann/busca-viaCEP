@@ -17,10 +17,8 @@ function consultaCEP() {
               emoji.innerText = arr[Math.floor(Math.random() * arr.length)];
         }, interval);
         }
-
   
   cep = document.getElementById("cep").value;
-
 
 //Iniciar animação Loading
   const init = (pedido) => {
@@ -33,15 +31,16 @@ function consultaCEP() {
   pedido.open("get", apiURL, true);
   pedido.onerror = function (e) {
 
-//CEP inválido - interação
+//CEP inválido - formato
     document.getElementById("resposta").innerHTML = "INVÁLIDO!";
     document.getElementById("cep").style.border = "2px solid crimson";
   };
-
+//CEP inválido - Valida CEP
   pedido.onload = () => {
     var conteudo = JSON.parse(pedido.responseText);
-    if (conteudo.erro === true) {
-      document.getElementById("resposta").innerHTML = "CEP NÃO ENCONTRADO";
+    if ("erro"  in conteudo) {
+      document.getElementById("resposta").innerHTML = "Inválido!";
+      document.getElementById("cep").style.border = "2px solid crimson";
       
     } else {
     
